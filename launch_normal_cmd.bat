@@ -23,6 +23,8 @@ if exist "settings.ini" (
 ) else (
 	echo error reading settings.ini file, setting defaults
 )
+for %%P in ("%core%") do set core=%%~dpP
+for %%P in ("%modules%") do set modules=%%~dpP
 set "path=%path%;%core%extensions\;%core%modlets\;%~dp0"
 cd /d %core%modlets\
 start cmd.exe
