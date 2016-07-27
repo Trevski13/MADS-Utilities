@@ -25,6 +25,6 @@ if exist "settings.ini" (
 )
 for %%P in ("%core%") do set core=%%~dpP
 for %%P in ("%modules%") do set modules=%%~dpP
-set "path=%path%;%core%extensions\;%core%modlets\;%~dp0"
+set "path=%path%;%core%extensions;%core%modlets;%~dp0"
 cd /d %core%modlets\
 start cmd.exe
